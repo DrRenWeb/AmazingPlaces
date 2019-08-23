@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title>Amazing Places</title>
+
+   <!-- Google Fonts   -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet" />
+
+   <!-- CSS Stylesheets -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+   <link rel="stylesheet" href="css/styles.css" />
+
+   <!-- Font awesome -->
+   <script src="https://kit.fontawesome.com/fe840583c2.js"></script>
+
+   <!-- Bootstrap Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+       crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+       crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+       crossorigin="anonymous"></script>
+       <!-- Place Data -->
+       <script src="js/places.js"></script>
+</head>
+
+<body>
+
+   <main role="main">
+       <section class="jumbotron text-center">
+           <div class="container">
+               <h1>Search Result</h1>
+               <p class="result-msg lead text-muted">
+               </p>
+               <p>
+                   <a href="index.html" class="btn btn-primary my-2">Previous Page</a>
+               </p>
+           </div>
+       </section>
+
+       <div class="album py-5 bg-light">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_1" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_0">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 0-->
+                                       <div class="modal fade exampleModal_0" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_0" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_0">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_2" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_1">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 1-->
+                                       <div class="modal fade exampleModal_1" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_1" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_1">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_3" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_2">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 2-->
+                                       <div class="modal fade exampleModal_2" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_2" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_2">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_4" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_3">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 3-->
+                                       <div class="modal fade exampleModal_3" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_3" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_3">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_5" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_4">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 4-->
+                                       <div class="modal fade exampleModal_4" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_4" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_4">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_6" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_5">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 5-->
+                                       <div class="modal fade exampleModal_5" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_5" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_5">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_7" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_6">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 6-->
+                                       <div class="modal fade exampleModal_6" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_6" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_6">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_8" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_7">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 7-->
+                                       <div class="modal fade exampleModal_7" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_7" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_7">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <img class="card-img-top" width="100%" height="225" alt="download_picture_9" />
+                           <div class="card-body">
+                               <p class="card-text-scroll"></p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <button type="button" class="map-btn btn btn-sm btn-outline-secondary">
+                                           <i class="fas fa-map-marker"></i> Map
+                                       </button>
+                                       <button type="button" class="detail-btn btn btn-sm btn-outline-secondary"
+                                           data-toggle="modal" data-target=".exampleModal_8">
+                                           Details
+                                       </button>
+                                       <!-- Modal Dialog 8-->
+                                       <div class="modal fade exampleModal_8" tabindex="-1" role="dialog"
+                                           aria-labelledby="exampleModalLabel_8" aria-hidden="true">
+                                           <div class="modal-dialog" role="document">
+                                               <div class="modal-content">
+                                                   <div class="modal-header">
+                                                       <h5 class="modal-title" id="exampleModalLabel_8">Details about
+                                                           this place</h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                           aria-label="Close">
+                                                           <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                       <p class="placeName"></p>
+                                                       <p class="nearestTown"></p>
+                                                       <p class="direction"></p>
+                                                       <p class="nearByAttractions"></p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                       <button type="button" class="btn btn-secondary"
+                                                           data-dismiss="modal">Close</button>
+                                                      
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </main>
+
+   <footer class="container">
+       <p>&copy; Company 2017-2019</p>
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="js/searchResult.js"></script>
+</body>
+
+</html>
