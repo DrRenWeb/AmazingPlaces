@@ -1,0 +1,43 @@
+body{
+  background-color: #f7f5f6;
+}
+
+footer{
+  text-align: center;
+}
+
+.Amazing-Places-Title{
+    font-family: 'Offside';
+    color: rgb(51, 153, 255);
+    line-height: 43.5555572509766px;
+}
+
+.lead{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #666;
+}
+
+.jumbotron {
+ padding-top: 3rem;
+ padding-bottom: 3rem;
+ margin-bottom: 0;
+ background-color: white;
+}
+
+.card-text-scroll {
+ height: 72px;
+ overflow-y: auto;
+ font-family: 'Open Sans',sans-serif;
+ color: #666;
+}
+
+.search-box{
+  justify-content: flex-end;
+}
+
+.upload{
+  margin-bottom: 90px;
+  margin-left: 40%;
+}
