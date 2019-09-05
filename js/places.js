@@ -126,7 +126,7 @@ var place11 = new Place(
  "",
  "Exit HW1 to 208, follow F208, then F235 to the end. 4x4 Jeep/truck a must. Rough road.  Stream crossing. Took me 3-4hours one way from HW1.",
  "Dusk/dawn, so it’s better to camp at this site overnight. No shower on site at present time. Very clean washroom though.",
- "https://www.google.com/maps/search/64.118998,-18.428167?sa=X&ved=2ahUKEwjir8iPkobkAhUPhuAKHdiTCGAQ8gEwAHoECAAQAQ"
+ "https://www.google.com/maps/search/64.114540,+-18.434853?sa=X&ved=2ahUKEwiOqZ_K3rrkAhWrl-AKHe2LD8EQ8gEwAHoECAoQAQ"
 );
 
 var place12 = new Place(
@@ -136,7 +136,7 @@ var place12 = new Place(
  "",
  "Exit HW1 to 249 which become F249 as it is getting rougher and ROUGHER, 4x4 truck/Jeep is a must.  Serious stream crossing. Follow the road to Basar campsite. Hiking from there takes 1-1.5hr on way. Prepare for at least 6 hours round trip from HW1.",
  "A View worth all the trouble!",
- "https://www.google.com/maps/search/63.672704,-19.438178?sa=X&ved=2ahUKEwjJ9LyGkIbkAhWHTN8KHVHyDRQQ8gEwAHoECAAQAQ",
+ "https://www.google.com/maps/place/63%C2%B040%2736.5%22N+19%C2%B027%2721.0%22W/@63.6767984,-19.4580187,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d63.676796!4d-19.45583",
  ""
 );
 
