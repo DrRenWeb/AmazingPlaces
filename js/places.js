@@ -169,7 +169,7 @@ var place15 = new Place(
  "",
  "Clingman's Dome parking area",
  "Best time to visit: dawn or sunrise",
- "https://www.google.com/maps/search/35.595262,-83.416051?sa=X&ved=2ahUKEwj5g8fjiYbkAhXtYt8KHbm7CVkQ8gEwAHoECAAQAQ",
+ "https://www.google.com/maps/place/35%C2%B035%2742.1%22N+83%C2%B024%2759.9%22W/@35.5950278,-83.4188276,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d35.595022!4d-83.41665",
  ""
 );
 
@@ -180,7 +180,7 @@ var place16 = new Place(
  "",
  "Clingman's Dome parking area",
  "Best time to visit: dawn or sunrise",
- "https://www.google.com/maps/search/35.595262,-83.416051?sa=X&ved=2ahUKEwj5g8fjiYbkAhXtYt8KHbm7CVkQ8gEwAHoECAAQAQ",
+ "https://www.google.com/maps/place/35%C2%B035%2742.1%22N+83%C2%B024%2759.9%22W/@35.5950278,-83.4188276,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d35.595022!4d-83.41665",
  ""
 );
 
